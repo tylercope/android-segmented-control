@@ -1,6 +1,6 @@
 android-segmented-control
 =========================
-Android-Segmented is a custom view for Android which is based on LinearLayout ~RadioGroup~ and the CheckBox ~RadioButton~ widget.
+Android-Segmented is a custom view for Android which is based on LinearLayout ~~RadioGroup~~ and the CheckBox ~~RadioButton~~ widget.
 This implementation is inspired by [Segmented Controls](https://developer.apple.com/library/ios/documentation/userexperience/conceptual/UIKitUICatalog/UISegmentedControl.html) for iOS.
 
 **This fork supports multiple selection and button toggle off.**
@@ -23,7 +23,7 @@ Copy(or merge) below files into corresponding file/folder:
   + res/drawable-v14/*
   + res/values/colors.xml
   + res/values/dimens.xml
-  + res/values/styles.xml (only CheckBox ~RadioButton~ style)
+  + res/values/styles.xml (only CheckBox ~~RadioButton~~ style)
 
 Usage
 -----
