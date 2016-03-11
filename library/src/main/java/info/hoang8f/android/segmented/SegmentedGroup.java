@@ -10,13 +10,13 @@ import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.StateListDrawable;
 import android.os.Build;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.RadioGroup;
 
-public class SegmentedGroup extends RadioGroup {
+public class SegmentedGroup extends LinearLayout {
 
     private int mMarginDp;
     private Resources resources;
@@ -28,9 +28,9 @@ public class SegmentedGroup extends RadioGroup {
     public SegmentedGroup(Context context) {
         super(context);
         resources = getResources();
-        mTintColor = resources.getColor(R.color.radio_button_selected_color);
-        mMarginDp = (int) getResources().getDimension(R.dimen.radio_button_stroke_border);
-        mCornerRadius = getResources().getDimension(R.dimen.radio_button_conner_radius);
+        mTintColor = resources.getColor(R.color.checkbox_selected_color);
+        mMarginDp = (int) getResources().getDimension(R.dimen.checkbox_stroke_border);
+        mCornerRadius = getResources().getDimension(R.dimen.checkbox_conner_radius);
         mLayoutSelector = new LayoutSelector(mCornerRadius);
     }
 
@@ -44,15 +44,15 @@ public class SegmentedGroup extends RadioGroup {
         try {
             mMarginDp = (int) typedArray.getDimension(
                     R.styleable.SegmentedGroup_sc_border_width,
-                    getResources().getDimension(R.dimen.radio_button_stroke_border));
+                    getResources().getDimension(R.dimen.checkbox_stroke_border));
 
             mCornerRadius = typedArray.getDimension(
                     R.styleable.SegmentedGroup_sc_corner_radius,
-                    getResources().getDimension(R.dimen.radio_button_conner_radius));
+                    getResources().getDimension(R.dimen.checkbox_conner_radius));
 
             mTintColor = typedArray.getColor(
                     R.styleable.SegmentedGroup_sc_tint_color,
-                    getResources().getColor(R.color.radio_button_selected_color));
+                    getResources().getColor(R.color.checkbox_selected_color));
 
             mCheckedTextColor = typedArray.getColor(
                     R.styleable.SegmentedGroup_sc_checked_text_color,
@@ -66,9 +66,9 @@ public class SegmentedGroup extends RadioGroup {
     public SegmentedGroup(Context context, AttributeSet attrs) {
         super(context, attrs);
         resources = getResources();
-        mTintColor = resources.getColor(R.color.radio_button_selected_color);
-        mMarginDp = (int) getResources().getDimension(R.dimen.radio_button_stroke_border);
-        mCornerRadius = getResources().getDimension(R.dimen.radio_button_conner_radius);
+        mTintColor = resources.getColor(R.color.checkbox_selected_color);
+        mMarginDp = (int) getResources().getDimension(R.dimen.checkbox_stroke_border);
+        mCornerRadius = getResources().getDimension(R.dimen.checkbox_conner_radius);
         initAttrs(attrs);
         mLayoutSelector = new LayoutSelector(mCornerRadius);
     }
@@ -157,8 +157,8 @@ public class SegmentedGroup extends RadioGroup {
 
         private int children;
         private int child;
-        private final int SELECTED_LAYOUT = R.drawable.radio_checked;
-        private final int UNSELECTED_LAYOUT = R.drawable.radio_unchecked;
+        private final int SELECTED_LAYOUT = R.drawable.check_box_checked;
+        private final int UNSELECTED_LAYOUT = R.drawable.check_box_unchecked;
 
         private float r;    //this is the radios read by attributes or xml dimens
         private final float r1 = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP
