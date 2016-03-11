@@ -1,8 +1,9 @@
 android-segmented-control
 =========================
-Android-Segmented is a custom view for Android which is based on RadioGroup and RadioButton widget.
+Android-Segmented is a custom view for Android which is based on LinearLayout ~RadioGroup~ and the CheckBox ~RadioButton~ widget.
 This implementation is inspired by [Segmented Controls](https://developer.apple.com/library/ios/documentation/userexperience/conceptual/UIKitUICatalog/UISegmentedControl.html) for iOS.
 
+**This fork supports multiple selection and button toggle off.**
 
 ![Sample Image](https://raw.githubusercontent.com/hoang8f/android-segmented-control/master/screenshot/screenshot3.png)
 
@@ -22,11 +23,11 @@ Copy(or merge) below files into corresponding file/folder:
   + res/drawable-v14/*
   + res/values/colors.xml
   + res/values/dimens.xml
-  + res/values/styles.xml (only RadioButton style)
+  + res/values/styles.xml (only CheckBox ~RadioButton~ style)
 
 Usage
 -----
-Define in xml like this and make sure that the `RadioButton`'s style is: `@style/RadioButton`
+Define in xml like this and make sure that the `CheckBox`'s style is: `@style/CheckBox`
 
 ```xml
 <attr name="sc_corner_radius" format="dimension" />
@@ -48,19 +49,19 @@ Sample code:
     segmentedgroup:sc_border_width="2dp"
     segmentedgroup:sc_corner_radius="10dp">
 
-    <RadioButton
+    <CheckBox
         android:id="@+id/button21"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="One"
-        style="@style/RadioButton" />
+        style="@style/CheckBox" />
 
-    <RadioButton
+    <CheckBox
         android:id="@+id/button22"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Two"
-        style="@style/RadioButton" />
+        style="@style/CheckBox" />
 </info.hoang8f.android.segmented.SegmentedGroup>
 ```
 
