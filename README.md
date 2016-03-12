@@ -13,8 +13,8 @@ This implementation is inspired by [Segmented Controls](https://developer.apple.
 Android-Segmented Library is pushed to [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22android-segmented%22), so you just need to add the following dependency to your `build.gradle`.
 
     dependencies {
-        compile 'info.hoang8f:android-segmented:1.0.6'
-    }
+	        compile 'com.github.tylercope:android-segmented-control:release_2.0.0'
+	} 
 
 ####Manually
 Copy(or merge) below files into corresponding file/folder:
